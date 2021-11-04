@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" sizes="80x42" href="favicon.png" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
     <link rel="stylesheet" href="assets/css/normalize.css" />
@@ -23,7 +24,7 @@
             srcset="assets/img/dev-worker_x2100.jpg 2100w, assets/img/dev-worker_x1550.jpg 1550w, assets/img/dev-worker_x775.jpg 775w, assets/img/dev-worker_x390.jpg 390w" 
             sizes="(min-width:400) 775px, (min-width:960) 1550px, (min-width:1600) 2100px, 100vw" alt="bannière">
         </figure>
-        <nav>
+        <nav class="desktop">
             <ul>
                 <li><a href="#">A propos</a></li>
                 <li><a href="#">Compétences</a></li>
@@ -32,29 +33,42 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
-        <h1>Développeur Full Stack</h1>
+        
+        <nav class="mobile">
+            <div class="burger-menu">
+                <span class="material-icons-outlined">menu</span>
+            </div>
+            <ul class="mobile-menu">
+                <li><a href="#">A propos</a></li>
+                <li><a href="#">Compétences</a></li>
+                <li><a href="#">Expérience</a></li>
+                <li><a href="#">Formation</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        
     </header>
     <main>
         <section class="apropos">
-            <h2 class="apropos_titre">A propos</h2>
-            <div class="container">
-                <div class="apropos_foto">
+            <h1>Développeur Full Stack</h1>
+            <div class="apropos_blocfoto">
+                <div class="apropos_blocfoto-figure">
                     <figure>
                         <img src="https://images.unsplash.com/photo-1634848507505-0451a2412aa6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80"
                             height="300" alt="Photo de profil" />
                     </figure>
                 </div>
-                <div class="apropos_description">
+                <div class="apropos_blocfoto-description">
                     <ul>
                         <li>NGELI NSABAKA Rickou</li>
-                        <li><span class="material-icons">mail_outline</span><a href="mailto:rickoungeli@gmail.com">M'envoyer un email</a> </li>
-                        <li><i class="fa-solid fa-mobile-screen-button"></i> : 0778518039</li>
+                        <li><a href="mailto:rickoungeli@gmail.com">M'envoyer un email</a> </li>
+                        <li>0778518039</li>
                         <li><address>2B Rue Ernest Sarron, 77400 Claye-Souilly</address></li>
                     </ul>
                 </div>
             </div>
         </section>
-        <section>
+        <section class="competence">
             <h2>Compétences</h2>
             <table>
                 <caption>Mes compétences front-end</caption>
@@ -89,7 +103,7 @@
                 </tfoot>
             </table>
         </section>
-        <section>
+        <section class="experience">
             <h2>Expérience professionnelle</h2>
             <article>
                 <h3>Air France</h3>
