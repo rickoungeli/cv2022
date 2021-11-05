@@ -15,32 +15,37 @@
   src: url("../fonts/open-sans/opensans_bolditalic_macroman/OpenSans-BoldItalic-webfont.woff") format("woff");
   font-display: swap; }
 *, before, after {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box; }
 
 html {
   font-family: Roboto; }
 
+body {
+  min-height: 100vh; }
+
 header {
   position: sticky;
   top: -120px;
-  z-index: 1000; }
+  z-index: 1000;
+  margin: 0;
+  padding: 0; }
   header img {
     filter: grayscale(100); }
   header .burger-menu {
     background-color: goldenrod; }
+    header .burger-menu span {
+      cursor: pointer; }
   header nav.desktop {
     display: none; }
     header nav.desktop ul {
-      width: 80%;
       background-color: goldenrod;
       display: flex;
       gap: .1em; }
     header nav.desktop li {
       padding: 15px 10px;
       font-family: 'Roboto';
-      flex: 1 0 auto; }
+      flex: 1 0 auto;
+      transition: color, .5s; }
       header nav.desktop li:hover {
         background-color: #fff;
         color: goldenrod; }
@@ -69,11 +74,15 @@ h1 {
   text-shadow: 0 5px 5px black; }
 
 h2 {
-  color: goldenrod; }
+  color: goldenrod;
+  margin-bottom: 20px; }
+
+form, fieldset {
+  padding: 10px; }
 
 /** POUR TOUTES LES SECTION **/
 section {
-  padding: 20px;
+  padding: 10px;
   /* sections paires */
   /* sections impaires */ }
   section:nth-of-type(odd) {
@@ -115,20 +124,45 @@ section {
   background-color: lighter(#373737); }
 
 footer {
+  position: relative;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+  padding: 20px;
   background-color: #373737;
   color: #fff; }
+  footer .footer-icone {
+    font-size: 28px;
+    cursor: pointer;
+    color: #a5a5ac;
+    transition: color, .5s; }
+    footer .footer-icone:hover {
+      color: #fff; }
 
-@media only screen and (min-width: 780px) {
+@media screen and (min-width: 480px) {
+  .formation_container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center; }
+    .formation_container article {
+      flex-basis: 45%; } }
+@media screen and (min-width: 780px) {
   main, nav {
     max-width: 980px;
     margin: 0 auto; }
 
   h1 {
-    font-size: 10vh; }
+    font-size: 5vw; }
 
-  nav.mobile {
+  header nav.desktop {
+    display: block; }
+  header nav.mobile {
     display: none; }
-  nav.desktop {
-    display: block; } }
+
+  .formation_container article {
+    flex-basis: 30%; } }
 
 /*# sourceMappingURL=style.css.map */

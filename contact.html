@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="80x42" href="favicon.png" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Page de contact - CV 2022 Curriculum vitae Rickou Ngeli Nsabaka </title>
+</head>
+
+<body>
+    <header>
+        <figure>
+            <img src="assets/img/dev-worker_x2100.jpg"
+                srcset="assets/img/dev-worker_x2100.jpg 2100w, assets/img/dev-worker_x1550.jpg 1550w, assets/img/dev-worker_x775.jpg 775w, assets/img/dev-worker_x390.jpg 390w"
+                sizes="(min-width:400) 775px, (min-width:960) 1550px, (min-width:1600) 2100px, 100vw" alt="bannière">
+        </figure>
+        <nav class="desktop">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="#">Compétences</a></li>
+                <li><a href="#">Expérience</a></li>
+                <li><a href="#">Formation</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <nav class="mobile">
+            <div class="burger-menu">
+                <span class="material-icons-outlined">menu</span>
+            </div>
+            <ul class="mobile-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="#">Compétences</a></li>
+                <li><a href="#">Expérience</a></li>
+                <li><a href="#">Formation</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <section>
+        <h1>Développeur Full Stack</h1>
+        <h2>Contactez-moi</h2>
+        <form action="response.html" method="post">
+            <fieldset>
+                <div class="form_contact-group">
+                    <label for="name">Noms : </label>
+                    <input type="text" id="name">
+                </div>
+                <div class="form_contact-group">
+                    <label for="email">Email : </label>
+                    <input type="email" id="email">
+                </div>
+                <div class="form_contact-group">
+                    <label for="phone">Téléphone :</label>
+                    <input type="tel" id="phone">
+                </div>
+                <div class="form_contact-group">
+                    <label for="message">Message :</label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </div>
+                <div class="form_contact-button">
+                    <input type="submit" value="Envoyer" role="button">
+                    <input type="reset" value="Annuler"role="button">
+                </div>
+
+            </fieldset>
+        </form>
+    </section>
+    <footer>
+        <div class="footer_social">
+            <span class="footer-icone"><i class="fa-brands fa-facebook"></i></span>
+            <span class="footer-icone"><i class="fa-brands fa-linkedin"></i></span>
+            <span class="footer-icone"><i class="fa-brands fa-twitter"></i></span>
+        </div>
+        <div class="copy">
+            <p>&copy; Rickou Ngeli 2021</p>
+        </div>
+        <div class="links">
+
+        </div>
+    </footer>
+</body>
+
+</html>

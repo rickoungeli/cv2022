@@ -1,21 +1,26 @@
 *, before, after {
-    margin : 0;
-    padding: 0;
     box-sizing: border-box;
 }
 html{ font-family: Roboto; }
-
+body {
+    min-height: 100vh;
+}
 header {
     position: sticky;
     top:-120px;
     z-index: 1000;
+    margin: 0;
+    padding: 0;
     img { filter: grayscale(100);}
-    .burger-menu {background-color: $primary_color;}
+    .burger-menu {
+        background-color: $primary_color;
+        span {cursor: pointer;}
+    }
     nav {
+
         &.desktop {
             display: none;
             ul {
-                width: 80%;
                 background-color: $primary_color;
                 display: flex;
                 gap: .1em;
@@ -24,6 +29,7 @@ header {
                 padding: 15px 10px;
                 font-family: 'Roboto';
                 flex: 1 0 auto;
+                transition: color, .5s;
                 &:hover {
                     background-color: $white;
                     color: $primary_color;
@@ -44,7 +50,9 @@ header {
             &:active {color:$secondary_color;}
         }
     }
+    
 }
+
 
 h1, h2 {
     font-family: 'Playfair regular';
@@ -62,11 +70,15 @@ h1 {
 }
 h2 {
     color: $primary_color;
+    margin-bottom: 20px;
 }
 
+form, fieldset {
+    padding: 10px;
+}
 /** POUR TOUTES LES SECTION **/
 section {
-    padding: 20px;
+    padding: 10px;
 
     /* sections paires */
     &:nth-of-type(odd) {
@@ -127,9 +139,25 @@ section {
     background-color: lighter($secondary_color);
 }
 
-
-
 footer {
+    position: relative;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    padding: 20px;
     background-color: rgba($color: #373737, $alpha: 1.0);
     color: $white;
+    
+    .footer-icone {
+        font-size: 28px;
+        cursor: pointer;
+        color:rgb(165, 165, 172);
+        transition: color, .5s;
+        &:hover {
+            color: $white;
+        }
+    }
 }
